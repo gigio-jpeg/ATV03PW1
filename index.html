@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 16 - Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Seção de Introdução -->
+    <header class="hero">
+        <img src="iphone16-header.png" alt="iPhone 16">
+        <h1>Hello, Apple Intelligence.</h1>
+        <p>From $799 or $33.29/mo. for 24 mo.<br>Apple Intelligence coming this fall!</p>
+    </header>
+
+    <!-- Seção de Recursos -->
+    <section class="features">
+        <h2>Recursos</h2>
+        <div class="grid">
+            <div class="feature">
+                <img src="icon-camera.png" alt="Câmera">
+                <h3>Câmera de alta qualidade</h3>
+                <p>Tire fotos incríveis com a câmera avançada.</p>
+            </div>
+            <div class="feature">
+                <img src="icon-battery.png" alt="Bateria">
+                <h3>Durabilidade da bateria</h3>
+                <p>Até 24 horas de uso contínuo.</p>
+            </div>
+            <div class="feature">
+                <img src="icon-display.png" alt="Display">
+                <h3>Display Retina</h3>
+                <p>Experiência visual impressionante.</p>
+            </div>
+            <div class="feature">
+                <img src="icon-speed.png" alt="Velocidade">
+                <h3>Processador rápido</h3>
+                <p>Desempenho sem igual com o novo chip.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Animação -->
+    <section class="animation">
+        <h2>Escolha sua Cor</h2>
+        <div class="color-display">
+            <input type="radio" name="color" id="black" checked>
+            <label for="black" class="color" style="background-color: #333;"></label>
+    
+            <input type="radio" name="color" id="white">
+            <label for="white" class="color" style="background-color: #fff; border: 1px solid #ccc;"></label>
+    
+            <input type="radio" name="color" id="pink">
+            <label for="pink" class="color" style="background-color: #f4c2c2;"></label>
+    
+            <input type="radio" name="color" id="green">
+            <label for="green" class="color" style="background-color: #98ff98;"></label>
+    
+            <input type="radio" name="color" id="blue">
+            <label for="blue" class="color" style="background-color: #87cefa;"></label>
+        </div>
+        
+        <div class="image-container">
+            <div class="img img-black">
+                <img src="iphone-black.png" alt="iPhone Preto">
+            </div>
+            <div class="img img-white">
+                <img src="iphone-white.png" alt="iPhone Branco">
+            </div>
+            <div class="img img-pink">
+                <img src="iphone-pink.png" alt="iPhone Rosa">
+            </div>
+            <div class="img img-green">
+                <img src="iphone-green.png" alt="iPhone Verde">
+            </div>
+            <div class="img img-blue">
+                <img src="iphone-blue.png" alt="iPhone Azul">
+            </div>
+        </div>
+    
+        <a href="#notify" class="btn-buy">Buy</a>
+    
+        <!-- Notificação -->
+        <div id="notify" class="notification">
+            <p>Comprado ✔️</p>
+            <a href="#" class="close-btn">Fechar</a>
+        </div>
+    </section>
+    
+    
+    
+
+    <!-- Seção de Especificações -->
+    <section class="specifications">
+        <h2>Especificações</h2>
+        <div class="specs">
+            <div class="spec">
+                <h3>Dimensões</h3>
+                <p>147.5 x 71.5 x 7.65 mm</p>
+            </div>
+            <div class="spec">
+                <h3>Peso</h3>
+                <p>199 gramas</p>
+            </div>
+            <div class="spec">
+                <h3>Processador</h3>
+                <p>A18 Bionic</p>
+            </div>
+            <div class="spec">
+                <h3>Armazenamento</h3>
+                <p>128GB, 256GB, 512GB</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Preço -->
+    <section class="price">
+        <h2>Preço</h2>
+        <p class="price-value">$799</p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2024 Apple Inc. Todos os direitos reservados.</p>
+        <p>Contato: contato@apple.com</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/apple">Facebook</a>
+            <a href="https://x.com/apple">X</a>
+            <a href="https://www.instagram.com/apple/">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        // Script para mudar a imagem com base na cor selecionada
+        const radios = document.querySelectorAll('input[name="color"]');
+        const images = document.querySelectorAll('.image-container .img');
+
+        radios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                images.forEach(img => {
+                    img.style.display = 'none'; // Esconde todas as imagens
+                });
+                const selectedImg = document.querySelector(`.img-${radio.id}`);
+                selectedImg.style.display = 'block'; // Mostra a imagem correspondente
+            });
+        });
+    </script>
+</body>
+</html>
