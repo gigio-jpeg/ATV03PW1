@@ -10,5 +10,3 @@ Esta é uma landing page desenvolvida para apresentar o novo iPhone 16. O projet
 - **Seção de Especificações**: Informações técnicas dispostas em colunas utilizando flexbox.
 - **Seção de Preço**: Exibe o preço centralizado na tela.
 - **Rodapé**: Contém informações de contato e links para redes sociais.
-
-## Estrutura do Projeto
